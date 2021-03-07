@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('unit-testing');
   });
 
-  it('should render title', () => {
+  it('should render title of type h3', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('unit-testing app is running!');
+    expect(compiled.querySelector('#title').nodeName).toContain('H3');
   });
 });
